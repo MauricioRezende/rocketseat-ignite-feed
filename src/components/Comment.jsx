@@ -12,7 +12,11 @@ export function Comment({ content, onDeleteComment  }) {
   }
 
   function handleLikeComment() {
+    // Se eu chamar um embaixo do outro, não irá somar duas vezes
     //setLikeCount(likeCount + 1);
+
+    // Dessa forma a variável state contem o valor mais atual do estado
+    // É possível chamar o setLikeCount um embaixo do outro que irá somar duas vezes
     setLikeCount((state) => {
       return state + 1
     });
